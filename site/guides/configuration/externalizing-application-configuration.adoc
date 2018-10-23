@@ -11,7 +11,7 @@ link:http://kubernetes.io/docs/user-guide/configmap/[`ConfigMap`] is a {deployme
 The `ConfigMapPropertySource` provided by Spring Cloud Kubernetes searches the deployment configuration of your application for a ConfigMap object in which the `metadata.name` property matches the name of your {SpringBoot} application and applies the values to the deployment configuration of your application.
 The application name is set by the `spring.application.name` property.
 
-Alternatively, you can specify a custom name forhttp://localhost:8088/guides/adding-configuring-guides#_using_collapsible_sections_in_guides your ConfigMap.
+Alternatively, you can specify a custom name for your ConfigMap.
 Set the value of the `spring.cloud.kubernetes.config.name` property in the `bootstrap.properties` file of your application project to the name of your ConfigMap.
 This enables the externalized configuration to be recognized and processed by your application.
 
@@ -159,6 +159,7 @@ java -jar {app-name}.jar -Dspring.profiles.active=developer
 
 === Built-in configuration properties
 
+--
 The table below lists the configuration properties provided by Spring Cloud Kubernetes:
 
 [options="header"]
@@ -170,3 +171,4 @@ The table below lists the configuration properties provided by Spring Cloud Kube
 | spring.cloud.kubernetes.config.paths     | List    | null                       | Sets the paths where ConfigMaps are mounted
 | spring.cloud.kubernetes.config.enableApi | Boolean | true                       | Enable/Disable consuming ConfigMaps via APIs
 |===
+--
