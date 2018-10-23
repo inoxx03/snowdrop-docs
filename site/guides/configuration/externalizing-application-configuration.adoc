@@ -38,7 +38,7 @@ oc policy add-role-to-user view system:serviceaccount:$(oc project -q):{app-name
 Specify values of individual configuration properties directly in key-value format.
 {deploymentPlatform} processes the ConfigMap and maps the values to your application.
 This structure is suitable for updating specific properties within an otherwise static configuration.
-+
+
 [source,yaml,options="nowrap"]
 ----
 kind: ConfigMap
